@@ -75,9 +75,9 @@ def restapi(
 
     try:
         if method == METH_GET:
-            return requests.get(url, params=data_str, headers=headers)
+            return requests.get(url, params=data_str, headers=headers, verify=ctx.session.verify)
 
-        return requests.request(method, url, data=data_str, headers=headers)
+        return requests.request(method, url, data=data_str, headers=headers, verify=ctx.session.verify)
 
     except requests.exceptions.ConnectionError:
         raise HomeAssistantCliError(f"Error connecting to {url}")
