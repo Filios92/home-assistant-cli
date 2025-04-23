@@ -133,5 +133,5 @@ setup(
     extras_require=EXTRAS_REQUIRE,
     python_requires=f'>={MIN_PY_VERSION}',
     test_suite='tests',
-    entry_points={'console_scripts': ['hass-cli = homeassistant_cli.cli:run']},
+    entry_points={'console_scripts': ['hass-cli = homeassistant_cli.cli:run', 'hass-cont-cli = homeassistant_cli.contcli:run']},
 )
