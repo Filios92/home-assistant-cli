@@ -10,4 +10,4 @@ RUN apk add --no-cache --virtual build-dependencies gcc musl-dev\
 
 RUN pip3 install --upgrade pip; pip3 install --no-cache-dir -e .
 
-ENTRYPOINT ["hass-cli"]
+ENTRYPOINT ["hass-cont-cli"]
