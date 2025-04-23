@@ -39,7 +39,8 @@ def run() -> None:
         # standalone mode to keep that working.
         result = cli.main(standalone_mode=False)
         if isinstance(result, int):
-            sys.exit(result)
+            # sys.exit(result)
+            pass
 
     # Exception handling below is done to use logger
     # and mimick as close as possible what click would
