@@ -22,6 +22,7 @@ exclude = ["tests", "tests.*"]
 
 [tool.poetry.scripts]
 hass-cli = "homeassistant_cli.cli:run"
+hass-cont-cli = "homeassistant_cli.contcli:run"
 
 [tool.poetry.dependencies]
 python = "^3.10"
