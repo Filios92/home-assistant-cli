@@ -47,10 +47,10 @@ def run() -> None:
     # do normally in its main()
     except click.ClickException as ex:
         ex.show()  # let Click handle its own errors
-        sys.exit(ex.exit_code)
+        #sys.exit(ex.exit_code)
     except click.Abort:
         _LOGGER.critical("Aborted!")
-        sys.exit(1)
+        #sys.exit(1)
     except Exception as ex:  # pylint: disable=broad-except
         if verbose:
             _LOGGER.exception(ex)
@@ -60,7 +60,7 @@ def run() -> None:
                 "Run with %s to see full exception information",
                 " or ".join(exceptionflags),
             )
-        sys.exit(1)
+        #sys.exit(1)
 
 
 class HomeAssistantCli(click.MultiCommand):
